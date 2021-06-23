@@ -76,7 +76,7 @@
 
 <script>
 
-
+import { mapActions, mapGetters} from 'vuex'
 export default {
 
   data () {
@@ -93,6 +93,7 @@ export default {
 
   },
   methods:{
+    ...mapActions('auth',['getUser']),
     async getCart(){
       const response_cart = await this.$api.get('/api/cart/full')
       this.cart = response_cart.data
@@ -106,6 +107,9 @@ export default {
     },
     async createOrder(){
       await this.$api.post(`/api/order/create/`)
+      await this.getCart()
+      await this.getUser()
+      this.$router.push('/lk/orders')
     }
 
   }
