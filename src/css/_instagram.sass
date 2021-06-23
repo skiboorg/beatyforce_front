@@ -1,0 +1,148 @@
+.instagram__content
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+.instagram__left
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  -ms-flex-flow: wrap
+  flex-flow: wrap
+
+.instagram__right
+  position: relative
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+
+  &::before
+    position: absolute
+    top: -3.125rem
+    display: block
+    width: 100%
+    height: 0.063rem
+    content: ''
+    background-color: #fff
+
+.instagram__pic
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  margin-bottom: 1.563rem
+
+  &:nth-child(1), &:nth-child(3)
+    -webkit-box-pack: end
+    -ms-flex-pack: end
+    justify-content: flex-end
+    padding-right: 1.563rem
+
+  &:nth-child(2)
+    -ms-flex-item-align: end
+    align-self: flex-end
+
+.instagram__img
+  display: block
+  -ms-flex-item-align: start
+  align-self: flex-start
+
+.instagram__btn
+  margin-top: 3.125rem
+
+@media (max-width: 1000px)
+  .instagram__pic
+    &:nth-child(1)
+      & .instagram__img
+        width: 220px
+        height: 220px
+    &:nth-child(2)
+      & .instagram__img
+        width: 190px
+        height: 190px
+    &:nth-child(3)
+      & .instagram__img
+        width: 165px
+        height: 190px
+    &:nth-child(4)
+      & .instagram__img
+        width: 207px
+        height: 207px
+
+@media (max-width: 600px)
+
+
+  .instagram__left
+    flex-basis: 60%
+  .instagram__right
+    flex-basis: 30%
+    padding-top: 30px
+    &::before
+      top: 0
+  .instagram__pic
+    &:nth-child(1)
+      & .instagram__img
+        width: 132px
+        height: 244px
+        object-fit: cover
+    &:nth-child(2)
+      & .instagram__img
+        width: 131px
+        height: 200px
+        object-fit: cover
+    &:nth-child(3)
+      & .instagram__img
+        width: 132px
+        height: 200px
+        object-fit: cover
+    &:nth-child(4)
+      & .instagram__img
+        width: 131px
+        height: 224px
+        object-fit: cover
+
+@media (max-width: 375px)
+  .instagram
+    height: 575px
+    position: relative
+    & .section__subtitle
+      margin-bottom: 25px
+    & .btn
+      position: absolute
+      bottom: -420px
+      left: 50%
+      transform: translateX(-50%)
+    &__content
+      flex-wrap: wrap
+      overflow: inherit
+    &__left
+      flex-basis: 100%
+      order: 2
+      justify-content: center
+    &__right
+      flex-basis: 100%
+      order: 1
+    &__pic
+      &:nth-child(1)
+        & .instagram__img
+          width: 140px
+          height: 140px
+          object-fit: cover
+      &:nth-child(2)
+        & .instagram__img
+          width: 120px
+          height: 120px
+          object-fit: cover
+      &:nth-child(3)
+        & .instagram__img
+          width: 110px
+          height: 110px
+          object-fit: cover
+      &:nth-child(4)
+        & .instagram__img
+          width: 135px
+          height: 135px
+          object-fit: cover

@@ -1,0 +1,98 @@
+.footer
+  padding: 3.125rem 0 0 0
+
+.footer_color-dark
+  background-color: #1f1a3d
+
+.footer__row
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  margin-bottom: 3.125rem
+
+.footer__text
+  color: #8f8c9e
+
+.footer__column
+  -ms-flex-preferred-size: 25%
+  flex-basis: 25%
+  width: 25%
+
+.footer__column-title
+  margin-bottom: 0.938rem
+  font-size: 24px
+  font-weight: 400
+  line-height: 1.938rem
+  color: #b4b2bb
+  text-transform: uppercase
+
+.footer__column-item
+  font-size: 1.000rem
+  line-height: 150%
+
+  &:hover
+    text-decoration: underline
+
+.footer__column-link
+  color: #1f1a3d
+
+.footer__column-link_color-white
+  color: #fff
+
+.footer__logo
+  margin-bottom: 25px
+
+.footer__logo-icon
+  max-width: 10.000rem
+  max-height: 1.875rem
+  fill: #8f8c9e
+
+.footer__line
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  padding: 1.563rem 0
+  border-top: 0.063rem solid #e9e8ec
+
+.footer__copy
+  font-size: 0.875rem
+  line-height: 1.125rem
+  color: #8f8c9e
+
+.footer__copy_link:hover
+  text-decoration: underline
+
+@media (max-width: 600px)
+  .footer
+    &__text
+      p
+        font-size: 14px
+        line-height: 18px
+    &__column-title
+      font-size: 18px
+    &__row
+      flex-wrap: wrap
+      & .footer__column:nth-child(1)
+        flex-basis: 100%
+        margin-bottom: 50px
+    &__line
+      flex-wrap: wrap
+    &__copy
+      flex-basis: 100%
+      order: 3
+      text-align: center
+      &_link
+        flex-basis: 100%
+        text-align: center
+        order: 2
+        margin-bottom: 10px
+    &__socials
+      flex-basis: 100%
+      order: 1
+      text-align: center
+      margin-bottom: 25px
+  .socials__list
+    justify-content: center

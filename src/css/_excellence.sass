@@ -1,0 +1,166 @@
+.section__title_excellence
+  position: absolute
+  bottom: 14.375rem
+  left: 0
+  margin-bottom: 0
+
+.excellence
+  padding: 3.125rem 0 6.250rem 0
+.slider-excellence
+  position: relative
+
+.slider-excellence__list
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  outline: none
+
+.slider-excellence__item
+  position: relative
+  -ms-flex-preferred-size: 100%
+  flex-basis: 100%
+  width: 100%
+  border: none
+  outline: none
+
+.slider-excellence__text
+  display: flex
+  justify-content: flex-end
+  width: 100%
+  transform: translateY(-4.063rem) translateX(-7.5rem)
+
+.slider-excellence__text-container
+  max-width: 34.375rem
+
+.slider-excellence__title
+  margin-bottom: 1.563rem
+  font-size: 50px
+  line-height: 64px
+  text-transform: uppercase
+
+.slider-excellence__desc
+  margin-bottom: 2.500rem
+  font-size: 16px
+  line-height: 24px
+
+.slider-excellence__btns
+  position: absolute
+  right: 34.375rem
+  bottom: 2.500rem
+
+.slider-excellence__btn
+  width: 3.125rem
+  height: 3.125rem
+  margin-right: 0.938rem
+  cursor: pointer
+  background-color: transparent
+  background-repeat: no-repeat
+  background-position: center
+  border: 0.063rem solid #fff
+  border-radius: 50%
+  outline: none
+  -webkit-transition: all .25s ease
+  -o-transition: all .25s ease
+  transition: all .25s ease
+
+  &:hover
+    background-color: #fff
+
+  &:last-child
+    margin-right: 0
+
+.slider-excellence__btn_next
+  -webkit-transform: rotate(180deg)
+  -ms-transform: rotate(180deg)
+  transform: rotate(180deg)
+
+.slider-excellence__btn_prev, .slider-excellence__btn_next
+  position: absolute
+  z-index: 100
+  bottom: 50px
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.646445 4.35355C0.451183 4.15829 0.451183 3.84171 0.646445 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.73079 0.659728 4.73079 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.73079 7.02369 4.73079 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646445 4.35355ZM16 4.5H0.999999V3.5H16V4.5Z' fill='white'/%3E%3C/svg%3E%0A")
+
+.slider-excellence__btn_prev:hover, .slider-excellence__btn_next:hover
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.646445 4.35355C0.451183 4.15829 0.451183 3.84171 0.646445 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.73079 0.659728 4.73079 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.73079 7.02369 4.73079 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646445 4.35355ZM16 4.5H0.999999V3.5H16V4.5Z' fill='%231F1A3D'/%3E%3C/svg%3E%0A")
+
+.slider-excellence__number
+  display: block
+  margin-right: 43%
+  text-align: right
+
+.slider-excellence__btn_prev
+
+  right: 48%
+.slider-excellence__btn_next
+
+  right: 42%
+
+
+
+@media (max-width: 1000px)
+  .section__title_excellence
+    bottom: 250px
+  .slider-excellence__img
+    width: 600px
+    height: 300px
+    object-fit: contain
+  .slider-excellence__text
+    transform: translateY(-90px) translateX(0)
+  .slider-excellence__text-container
+    max-width: 465px
+  .slider-excellence__btns
+    right: 350px
+    bottom: 70px
+
+@media (max-width: 600px)
+  .section__title_excellence
+    bottom: 255px
+  .slider-excellence
+    &__title
+      font-size: 40px
+      line-height: 51px
+      max-width: 370px
+    &__text
+      position: relative
+      transform: translateY(0) translateX(0)
+      justify-content: start
+    &__btns
+      right: 0
+      bottom: 0
+    &__number
+      margin-right: 0
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+
+@media (max-width: 375px)
+  .section__title_excellence
+    bottom: 200px
+  .slider-excellence
+    &__img
+      width: 100%
+      height: 150px
+      object-fit: cover
+      margin-bottom: 40px
+    &__title
+      font-size: 24px
+      line-height: 31px
+      max-width: 230px
+      margin-bottom: 10px
+    &__desc
+      p
+        font-size: 14px
+        line-height: 18px
+    &__btns
+      right: unset
+      left: 0
+      bottom: -20px
+    &__number
+      margin-right: 0
+      position: absolute
+      bottom: 0px
+      left: unset
+      transform: translateX(0)
+      right: 0

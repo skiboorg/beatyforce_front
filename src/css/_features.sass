@@ -1,0 +1,35 @@
+.features__list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+.features__item
+  position: relative
+  flex-basis: 50%
+  width: 50%
+  margin-bottom: 3.125rem
+
+  &:nth-child(3), &:nth-child(4)
+    margin-bottom: 0
+
+.features__item-title
+  position: relative
+  margin-bottom: 0.938rem
+  font-size: 3.125rem
+  line-height: 4.000rem
+
+  &::after
+    position: absolute
+    bottom: -0.313rem
+    left: 0
+    width: 75%
+    height: 0.063rem
+    content: ''
+    background-color: #fff
+
+
+@media (max-width: 1000px)
+  .features__item-title
+    font-size: 40px

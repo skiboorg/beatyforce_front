@@ -1,0 +1,82 @@
+.section-form
+  padding: 9.375rem 0
+
+.section-form__content
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  padding-top: 3.125rem
+  border-top: 0.063rem solid #fff
+
+.section-form__left
+  width: 50%
+
+.section-form__right
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  width: 50%
+
+.section-form__row
+  margin-bottom: 1.563rem
+
+.section-form__row_flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.section-form__title
+  display: block
+  margin-bottom: 0.500rem
+  color: #8f8c9e
+
+.section-form__title_size-xl
+  font-size: 1.500rem
+  font-weight: 500
+  line-height: 1.938rem
+  color: #fff
+
+.section-form__subtitle
+  display: block
+
+@media (max-width: 600px)
+  .section-form
+    position: relative
+  .mainform__row_flex
+    position: absolute
+    bottom: 0
+
+@media (max-width: 375px)
+  .mainform
+    &__row
+
+    &__row_flex
+      position: relative
+      bottom: unset
+      flex-wrap: wrap
+    &__disclaimer
+      flex-basis: 100%
+      order: 1
+      margin-bottom: 15px
+    &__button
+      order: 2
+    &__btn
+      margin: 0 auto 40px
+
+  .section-form
+    padding-top: 100px
+    &__content
+      flex-wrap: wrap
+    &__left
+      flex-basis: 100%
+      //margin-bottom: 200px
+    &__right
+      flex-basis: 100%
+      width: 100%
+      justify-content: start

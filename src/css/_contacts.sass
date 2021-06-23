@@ -1,0 +1,134 @@
+.page-contacts
+  background-color: #1f1a3d
+.branches
+  padding: 3.125rem 0 0 0
+  margin-bottom: 4.688rem
+
+.branches__list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+.branches__item
+  position: relative
+  -ms-flex-preferred-size: 33.3333%
+  flex-basis: 33.3333%
+  padding-top: 3.125rem
+
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    width: 93%
+    height: 0.063rem
+    content: ''
+    background-color: #fff
+
+.branches__title
+  margin-bottom: 1.563rem
+  font-size: 2.813rem
+  line-height: 4.000rem
+  text-transform: uppercase
+
+.branches__phone
+  display: block
+  margin-bottom: 0.938rem
+  font-size: 1.500rem
+  line-height: 1.938rem
+
+.branches__address, .branches__email
+  display: block
+  font-size: 1.000rem
+  line-height: 150%
+
+.branches__address
+  margin-bottom: 0.938rem
+
+.departments__list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  margin-bottom: 1.563rem
+
+.departments__item
+  position: relative
+  -ms-flex-preferred-size: 25%
+  flex-basis: 25%
+  padding-top: 1.563rem
+  margin-bottom: 3.125rem
+
+  &::before
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    width: 90%
+    height: 0.063rem
+    content: ''
+    background-color: #fff
+
+.departments__subtitle
+  display: block
+  margin-bottom: 0.313rem
+  font-size: 0.875rem
+  line-height: 1.125rem
+  color: #8f8c9e
+  text-transform: uppercase
+
+.departments__title
+  margin-bottom: 1.563rem
+  font-size: 2.813rem
+  color: #8f8c9e
+  text-transform: uppercase
+
+.departments__item-title
+  margin-bottom: 0.938rem
+  font-size: 1.500rem
+  line-height: 1.938rem
+  color: #fff
+
+@media (max-width: 375px)
+  .branches
+    margin-bottom: 50px
+    &__list
+      display: block
+    &__item
+      padding-top: 15px
+      padding-bottom: 25px
+    &__title
+      font-size: 24px
+      line-height: 30px
+      margin-bottom: 10px
+    &__phone
+      font-size: 14px
+      line-height: 18px
+      margin-bottom: 5px
+    &__address
+      font-size: 12px
+      line-height: 16px
+      margin-bottom: 5px
+    &__email
+      font-size: 12px
+      line-height: 16px
+      margin-bottom: 0
+  .departments
+    &__title
+      font-size: 24px
+      line-height: 30px
+      margin-bottom: 25px
+    &__item
+      padding-top: 15px
+      padding-bottom: 25px
+      margin-bottom: 0
+      flex-basis: 50%
+      &-title
+        font-size: 14px
+        line-height: 18px
+        margin-bottom: 10px
+
+

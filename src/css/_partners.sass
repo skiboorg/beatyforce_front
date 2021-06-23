@@ -1,0 +1,369 @@
+.page-partnership
+  background-color: #1f1a3d
+
+.partners
+  padding: 6.250rem 0
+  & .section__subtitle
+    max-width: 625px
+
+.partners__content
+  padding: 3.125rem 0 0 0
+  border-top: 0.063rem solid #fff
+
+.partners__grid
+  position: relative
+  display: grid
+  grid-template-columns: repeat(4,1fr)
+  grid-gap: 10px
+  margin-top: 4.688rem
+
+.partners__grid-link
+  position: absolute
+  top: 50%
+  left: 50%
+  z-index: 99
+  padding: 0
+  color: #1f1a3d
+  background-color: #fff
+  border: 0.063rem solid #fff
+  -webkit-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+
+  &:hover
+    color: #fff
+    background-color: #1f1a3d
+    border: 0.063rem solid #fff
+
+.partners__list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+
+.partners__item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  height: 313px
+  background-color: transparent
+  border: 0.063rem solid #504c67
+
+.partners__logo
+  width: 11.250rem
+
+.partners__logo--size-140
+  max-width: 8.438rem
+
+@media (max-width: 1000px)
+  .partners
+    &__item
+      height: 228px
+
+@media (max-width: 600px)
+  .partners
+    &__grid
+      grid-template-columns: repeat(3,1fr)
+    &__item
+      height: 180px
+
+@media (max-width: 375px)
+  .partners
+    padding-bottom: 200px
+    overflow: initial
+    &__grid
+      grid-template-columns: repeat(2,1fr)
+    &__item
+      height: 162px
+    & .btn
+      top: unset
+      bottom: -200px
+
+
+.page-partnership__section
+  padding: 3.125rem 0 6.250rem 0
+
+.page-partnership__subtitle
+  margin: 3.125rem 0
+  font-size: 3.125rem
+  text-transform: uppercase
+  text-align: center
+
+.page-partnership__subtitle_dark
+  color: #1f1a3d
+
+.page-partnership__desc
+  letter-spacing: 0.05em
+
+.page-partnership__title
+  font-size: 0.875rem
+  color: #fff
+  text-transform: uppercase
+  letter-spacing: 0.05em
+
+  &::after
+    display: inline-block
+    margin-left: 0.313rem
+    font-size: 0.875rem
+    color: #fff
+    content: '—'
+
+.page-partnership__desc-text
+  font-size: 3.125rem
+  line-height: 4.000rem
+  text-transform: uppercase
+  max-width: 970px
+
+.page-partnership__desc-text_accent
+  color: #8f8c9e
+
+.page-partnership__assortment-subtitle
+  -ms-flex-preferred-size: 25%
+  flex-basis: 25%
+  font-size: 0.875rem
+  color: #8f8c9e
+  text-transform: uppercase
+
+.page-partnership__assortment-content
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  padding: 1.563rem 0 3.125rem 0
+  border-top: 0.063rem solid #fff
+
+.page-partnership__assortment-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-preferred-size: 75%
+  flex-basis: 75%
+
+.page-partnership__assortment-item
+  -ms-flex-preferred-size: 33.3333%
+  flex-basis: 33.3333%
+  font-size: 1.500rem
+  font-weight: 200
+  line-height: 1.938rem
+  p
+    max-width: 300px
+
+  &:last-child
+    margin-right: 0
+
+.page-partnership__categories
+  margin: 9.375rem 0
+
+.page-partnership__categories-content
+  border-top: 0.063rem solid #fff
+
+.page-partnership__categories-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  margin-bottom: 3.125rem
+
+.page-partnership__categories-item
+  width: 15.313rem
+  height: 15.313rem
+  border: 0.063rem #504c67 solid
+
+.page-partnership__categories-text
+  font-size: 1.500rem
+  text-transform: uppercase
+  -webkit-transition: all .25s ease
+  -o-transition: all .25s ease
+  transition: all .25s ease
+
+.page-partnership__categories-icon
+  max-width: 4.375rem
+  max-height: 4.375rem
+  fill: #fff
+  -webkit-transition: all .25s ease
+  -o-transition: all .25s ease
+  transition: all .25s ease
+
+.page-partnership__categories-link
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  width: 100%
+  height: 100%
+  padding: 0.938rem
+  -webkit-transition: all .25s ease
+  -o-transition: all .25s ease
+  transition: all .25s ease
+
+  &:hover
+    background-color: #fff
+
+    .page-partnership__categories-text
+      color: #1f1a3d
+
+    .page-partnership__categories-icon
+      fill: #1f1a3d
+
+.page-partnership__categories-btn
+  margin: 0 auto
+
+.page-partnership__shops
+  margin-bottom: 9.375rem
+  &-grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 45px
+  &-item
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 45px
+
+
+.page-partnership__shops-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  margin-bottom: 8.750rem
+
+.page-partnership__shops-item
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  margin-bottom: 3.125rem
+
+  &:nth-child(5), &:nth-child(6)
+    margin-bottom: 0
+
+.page-partnership__shops-data
+  display: block
+  font-size: 0.750rem
+  color: #8f8c9e
+  text-align: center
+
+.page-partnership__map
+  padding-bottom: 9.375rem
+
+.page-partnership__terms
+  padding: 3.125rem 0 6.250rem 0
+  background-color: #fff
+
+.page-partnership__terms-list
+  display: grid
+  grid-template-columns: repeat(3,1fr)
+  margin: 3.125rem 0
+  margin-left: 25%
+
+.page-partnership__terms-item
+  color: $bg
+
+.page-partnership__terms-link
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  margin-left: 25%
+
+.page-partnership__services
+  padding: 9.375rem 0
+
+.page-partnership__services-title
+  margin-bottom: 1.563rem
+
+.page-partnership__services-item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  padding: 1.563rem 0
+  border-top: 0.063rem solid #fff
+
+.page-partnership__services-number
+  margin-right: 19.375rem
+  font-size: 0.875rem
+  color: #8f8c9e
+
+.page-partnership__services-subtitle
+  -webkit-box-flex: 1
+  -ms-flex-positive: 1
+  flex-grow: 1
+  font-size: 3.125rem
+  text-transform: uppercase
+
+.page-partnership__services-desc
+  max-width: 25.000rem
+
+.page-partnership__partners-content
+  border-top: 0.063rem solid #fff
+
+.page-partnership__partners-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  padding-bottom: 3.125rem
+  margin-top: 4.688rem
+
+.page-partnership__partners-item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  width: 20.000rem
+  height: 20.000rem
+  background: #fff
+  border-radius: 50%
+  -webkit-transform: scale(1.1)
+  -ms-transform: scale(1.1)
+  transform: scale(1.1)
+
+.page-partnership__partners-item_dark
+  background-color: #e9e8ec
+
+@media (max-width: 375px)
+  .page-partnership
+    &__desc
+      &-text
+        font-size: 20px
+        line-height: 26px
+    &__assortment
+      &-subtitle
+        margin-bottom: 15px
+      &-content
+        display: block
+        padding-top: 15px
+        padding-bottom: 25px
+      &-list
+        display: block
+      &-item
+        flex-basis: 100%
+        p
+          font-size: 16px
+          line-height: 24px
+    &__categories
+      margin-top: 75px

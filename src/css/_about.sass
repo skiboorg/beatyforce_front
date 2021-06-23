@@ -1,0 +1,512 @@
+.about
+  padding: 6.250rem 0 6.250rem 0
+
+  & .section__subtitle
+     max-width: 400px
+
+.about__content
+  padding-top: 3.125rem
+  border-top: 0.063rem solid #fff
+
+.about__wrapper
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.about__left
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  width: 50%
+
+.about__btn
+  //margin: 3.125rem auto 0 auto
+  margin-top: 50px
+
+.about__right
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  width: 50%
+
+.about__right-desc
+  margin-bottom: 3.125rem
+  font-size: 1.000rem
+  line-height: 150%
+
+//@media (max-width: 1000px)
+@media (max-width: 600px)
+  .about
+    position: relative
+    & .section__subtitle
+      max-width: 325px
+      margin-bottom: 25px
+    &__wrapper
+      display: block
+    &__left
+      width: 100%
+    &__right
+      width: 100%
+    &__btn
+      position: absolute
+      right: 20px
+      bottom: 100px
+    &__features
+      & .features
+        max-width: 450px
+        &__item
+          flex-basis: 46%
+          &-title
+            font-size: 37px
+
+@media (max-width: 375px)
+  .about
+    overflow: initial
+    position: relative
+    & .section__subtitle
+      max-width: 220px
+      margin-bottom: 15px
+    &__right-desc
+      font-size: 14px
+      margin-bottom: 25px
+    &__btn
+      position: absolute
+      right: unset
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -30px
+    &__features
+      & .features
+        max-width: 450px
+        &__item
+          flex-basis: 50%
+          margin-bottom: 25px
+          &-title
+            font-size: 25px
+            &::after
+              width: 90%
+
+
+.page-about
+  &__section
+    padding: 3.125rem 0 6.250rem 0
+  &__desc
+    letter-spacing: 0.05em
+  &__title
+    font-size: 0.875rem
+    color: #fff
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    &::after
+      display: inline-block
+      margin-left: 0.313rem
+      font-size: 0.875rem
+      color: #fff
+      content: '—'
+  &__desc-text
+    font-size: 3.125rem
+    line-height: 4.000rem
+    text-transform: uppercase
+    max-width: 850px
+    &_accent
+      color: #8f8c9e
+  &__img
+    width: 100%
+
+.page-about__brands
+  padding: 9.375rem 0 6.250rem 0
+  &-container
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+    padding-top: 3.125rem
+    border-top: 0.063rem solid #fff
+  &-content
+    max-width: 60.938rem
+  &-title
+    font-size: 0.875rem
+    color: #8f8c9e
+    text-transform: uppercase
+    letter-spacing: 0.05em
+
+  &-subtitle
+    margin-bottom: 1.563rem
+    font-size: 3.125rem
+    line-height: 4.000rem
+    text-transform: uppercase
+  &-desc
+    max-width: 28.125rem
+    font-size: 1.000rem
+    line-height: 150%
+    color: #8f8c9e
+
+.page-about__features
+  padding-bottom: 11.250rem
+
+.page-about__features-title
+  max-width: 17.188rem
+  font-size: 0.875rem
+  color: #8f8c9e
+  text-transform: uppercase
+  letter-spacing: 0.05em
+
+.page-about__features-content
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+.page-about__features-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-flow: wrap
+  flex-flow: wrap
+  max-width: 60.938rem
+
+.page-about__features-item
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  max-width: 50%
+  margin-bottom: 1.563rem
+  font-size: 1.500rem
+  line-height: 1.938rem
+  text-transform: uppercase
+
+.page-about__history
+  padding: 3.750rem 0 6.250rem 0
+  background-color: #fff
+
+.page-about__history-years
+  font-size: 6.875rem
+  font-weight: 100
+  line-height: 100%
+  color: #8f8c9e
+  letter-spacing: -0.05em
+
+  span
+    color: #1f1a3d
+
+.page-about__history-content
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+
+.page-about__history-item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: start
+  -ms-flex-pack: start
+  justify-content: flex-start
+  margin-bottom: 6.250rem
+  margin-left: 25%
+
+  &:last-child
+    margin-bottom: 0
+
+.page-about__history-item_right
+  margin-left: 50%
+
+.page-about__history-title
+  position: relative
+  max-width: 50rem
+  margin-bottom: 10px
+  margin-left: 25%
+  font-size: 6.875rem
+  font-weight: 100
+  line-height: 100%
+  color: #1f1a3d
+  text-transform: uppercase
+  letter-spacing: -0.05em
+
+  &.more-right
+    margin-left: 50%
+    margin-bottom: 100px
+
+.page-about__history-text
+  max-width: 630px
+  line-height: 1.500rem
+  line-height: 1.875rem
+  color: #8f8c9e
+
+  span
+    color: #1f1a3d
+
+.page-about__history-text-title
+  font-size: 50px
+  line-height: 64px
+  margin-bottom: 25px
+  color: #504C67
+  text-transform: uppercase
+
+.page-about__history-text-subtitle
+  font-size: 24px
+  line-height: 31px
+  color: #504C67
+  text-transform: uppercase
+  margin-bottom: 25px
+.page-about__history-text-desc
+  font-size: 16px
+  line-height: 24px
+  color: #1F1A3D
+.page-about__history-text_right
+  max-width: 28.125rem
+  color: #8f8c9e
+  text-align: left
+
+.page-about__show
+  padding-top: 9.375rem
+
+.page-about__show-title
+  margin-bottom: 1.563rem
+  font-size: 0.875rem
+  color: #8f8c9e
+  text-transform: uppercase
+
+.page-about__show-subtitle
+  font-size: 3.125rem
+  text-transform: uppercase
+
+.page-about__show-list
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  padding-bottom: 3.125rem
+  margin-top: 4.688rem
+
+.page-about__show-item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  width: 20.000rem
+  height: 20.000rem
+  background: #fff
+  border-radius: 50%
+  -webkit-transform: scale(1.1)
+  -ms-transform: scale(1.1)
+  transform: scale(1.1)
+
+.page-about__show-item_dark
+  background-color: #e9e8ec
+
+.page-about__philosophy
+  padding: 9.375rem 0
+
+.page-about__philosophy-title
+  margin-bottom: 3.125rem
+  margin-left: 50%
+  font-size: 3.125rem
+  text-transform: uppercase
+
+.page-about__philosophy-content
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  padding-top: 3.125rem
+  border-top: 0.063rem solid #fff
+
+.page-about__philosophy-pics
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  -ms-flex-flow: wrap
+  flex-flow: wrap
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+
+.page-about__philosophy-pic
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  margin-bottom: 1.563rem
+
+  &:nth-child(1), &:nth-child(3)
+    -webkit-box-pack: end
+    -ms-flex-pack: end
+    justify-content: flex-end
+    padding-right: 1.563rem
+
+  &:nth-child(2)
+    -ms-flex-item-align: end
+    align-self: flex-end
+
+.page-about__philosophy-img
+  display: block
+  -ms-flex-item-align: start
+  align-self: flex-start
+
+.page-about__philosophy-desc
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  padding-right: 1.563rem
+
+.page-about__philosophy-desc-title
+  margin-bottom: 1.563rem
+  font-size: 1.500rem
+  line-height: 1.938rem
+  text-transform: uppercase
+
+.page-about__philosophy-desc-text
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  &.text-mob
+    display: none
+
+  p
+    max-width: 18.750rem
+    line-height: 1.500rem
+
+@media (max-width: 375px)
+  .page-about
+    &__desc
+      &-text
+        font-size: 24px
+        line-height: 31px
+    &__show
+      &-subtitle
+        font-size: 24px
+        line-height: 31px
+      &-list
+        display: grid
+        grid-template-columns: 1fr 1fr
+      &-item
+        width: 165px
+        height: 165px
+        img
+          width: 75px
+          height: 18px
+          object-fit: contain
+    &__brands
+      padding-top: 25px
+      padding-bottom: 25px
+      &-container
+        display: block
+      &-subtitle
+        font-size: 24px
+        line-height: 31px
+        margin-bottom: 15px
+      &-desc
+        font-size: 14px
+        line-height: 17px
+    &__features
+      padding-bottom: 50px
+      &-content
+        display: block
+      &-title
+        margin-bottom: 15px
+      &-list
+        display: block
+      &-item
+        flex-basis: 100%
+        max-width: 100%
+    &__history
+      &-item
+        margin-bottom: 50px
+        margin-left: 0
+      &-title
+        font-size: 50px
+        line-height: 50px
+        margin-left: 0
+        margin-bottom: 0
+        &.more-right
+          margin-left: 0
+          margin-bottom: 50px
+      &-item_right
+        margin-left: 0
+      &-years
+        font-size: 50px
+        line-height: 50px
+        margin-bottom: 15px
+      &-text
+        &-title
+          font-size: 24px
+          line-height: 31px
+          margin-bottom: 15px
+        &-subtitle
+          font-size: 14px
+          line-height: 18px
+          margin-bottom: 15px
+        &-desc
+          line-height: 18px
+          margin-bottom: 15px
+    &__philosophy
+      padding: 50px 0
+      &-title
+        font-size: 24px
+        line-height: 31px
+        margin-left: 0
+        margin-bottom: 15px
+      &-content
+        padding-top: 15px
+        display: grid
+        grid-template-columns: 1fr
+      &-desc
+        order: 1
+        &-title
+          font-size: 14px
+          line-height: 18px
+        &-text
+          display: none
+          p
+            max-width: 100%
+            margin-bottom: 15px
+            &:last-child
+              margin-bottom: 0
+          &.text-mob
+            order: 3
+
+            display: block
+      &-pics
+        order: 2
+      &-pic
+        &:nth-child(1)
+          padding-right: 10px
+          margin-bottom: 10px
+          img
+            width: 145px
+            height: 145px
+            object-fit: contain
+        &:nth-child(2)
+          margin-bottom: 10px
+          img
+            width: 125px
+            height: 125px
+            object-fit: contain
+        &:nth-child(3)
+          padding-right: 10px
+          img
+            width: 110px
+            height: 110px
+            object-fit: contain
+        &:nth-child(4)
+          img
+            width: 145px
+            height: 145px
+            object-fit: contain
+
+
+
+

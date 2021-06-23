@@ -1,0 +1,102 @@
+.hero
+  position: relative
+  padding: 0
+  overflow: hidden
+
+.hero__wrapper
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: flex-end
+
+.hero__container
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+.hero__text
+  z-index: 9
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  margin-top: 122px
+
+.hero__subtitle
+  margin-bottom: 1.563rem
+  max-width: 270px
+
+  span
+    display: block
+    font-size: 1.000rem
+    line-height: 150%
+
+.hero__title
+  margin-bottom: 4.063rem
+  margin-left: -0.625rem
+  font-size: 100px
+  line-height: 100%
+  text-transform: uppercase
+  font-weight: lighter
+  letter-spacing: -0.05em
+  max-width: 600px
+
+.hero__pic
+  position: absolute
+  top: 86px
+  right: 0
+
+  img
+    width: 650px
+    height: 650px
+    object-fit: cover
+
+@media (max-width: 600px)
+  .hero__pic
+    top: 0
+    img
+      width: 400px
+      height: 400px
+  .hero__text
+    margin-top: 70px
+  .hero__subtitle
+    max-width: 170px
+  .hero__title
+    font-size: 70px
+    max-width: 170px
+
+@media (max-width: 375px)
+  .hero
+    &__container
+      display: grid
+      grid-template-columns: 1fr
+    &__pic
+      position: relative
+      order: 1
+    &__text
+      order: 2
+      margin-top: 15px
+      & .btn
+        margin: 0 auto
+    &__subtitle
+      max-width: 220px
+      margin-bottom: 15px
+    &__title
+      font-size: 60px
+      max-width: unset

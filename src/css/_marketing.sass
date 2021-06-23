@@ -1,0 +1,86 @@
+.marketing-features
+  margin-top: 4.688rem
+  max-width: 925px
+  margin-left: auto
+
+.marketing-features__list
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-row-gap: 75px
+  grid-column-gap: 50px
+
+.marketing-features__item
+
+  text-align: left
+
+  &:nth-child(4), &:nth-child(5), &:nth-child(6)
+    margin-bottom: 0
+
+.marketing-features__icon
+  max-width: 4.375rem
+  max-height: 4.375rem
+  margin-bottom: 1.250rem
+
+.marketing-features__title
+  margin-bottom: 0.938rem
+  font-size: 1.500rem
+  font-weight: 500
+  line-height: 1.938rem
+  text-transform: uppercase
+
+.marketing-features__desc
+  font-size: 1.000rem
+  line-height: 150%
+  color: #b4b2bb
+
+.marketing
+  padding: 3.125rem 0 0 0
+
+.marketing__content
+  padding-top: 3.125rem
+  border-top: 0.063rem solid #fff
+
+.marketing__left
+  -ms-flex-preferred-size: 75%
+  flex-basis: 75%
+  padding-top: 3.125rem
+
+.marketing__right
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-preferred-size: 25%
+  flex-basis: 25%
+  -webkit-box-align: end
+  -ms-flex-align: end
+  align-items: flex-end
+
+.marketing__pic
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: flex-end
+
+.marketing__img
+  max-width: 37.500rem
+
+@media (max-width: 1000px)
+  .marketing-features
+    margin-left: unset
+  .marketing-features__list
+
+    grid-gap: 75px
+    margin-bottom: 225px
+  .marketing__btn
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+@media (max-width: 600px)
+  .marketing-features__list
+    grid-template-columns: 1fr 1fr
+
+@media (max-width: 375px)
+  .marketing-features__list
+    margin-bottom: 100px
