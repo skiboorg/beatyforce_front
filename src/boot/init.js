@@ -14,8 +14,11 @@ export default async ({ app, router, Vue, store, ssrContext }) => {
     app.i18n.locale = lang
   }
   Vue.prototype.$cook = cookies
-  await store.dispatch('data/fetchBanners')
+  if (process.env.SERVER){
+    await store.dispatch('data/fetchBanners')
   await store.dispatch('data/fetchVideos')
+ }
+
   if (token) {
    await store.dispatch('auth/getUser')
   }
