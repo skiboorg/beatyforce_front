@@ -69,16 +69,18 @@
         <div class="catalog-brand" v-for="brand in brands" :key="brand.id">
           <h3>{{brand.name}}</h3>
 
-          <div class="catalog-brand__wrapper" v-for="category in brand.category" :key="category.id">
+          <div class="catalog-brand__wrapper" v-for="category in brand.lines" :key="category.id">
             <p class="catalog-brand__title">{{category.name}}</p>
             <div class="catalog-brand__grid">
-                <div class="catalog-brand__item" v-for="item in category.line_items" :key="item.id">
+                <div class="catalog-brand__item" v-for="item in category.items" :key="item.id">
 
                   <q-img :ratio="1" :src="item.image" alt="" />
                   <p class="catalog-brand__item-name">{{item.name}}</p>
                    <q-btn  v-if="cart.items.filter(x=>x.item===item.id).length===0"
                           class="catalog-brand__item-add"
                           icon="add"
+                           color="white"
+                           text-color="indigo-10"
                            :loading="loading"
                           @click="itemAction(item.id,'add_to_cart')"
                           :label="`${item.price} ₽`" />
@@ -261,54 +263,20 @@ export default {
             font-weight: 400
             font-size: 16px
 
+@media (max-width: 600px)
+  .catalog-top
+    grid-template-columns: 1fr
+    grid-gap: 20px
+    &__right
+      grid-template-columns: 1fr
+      grid-gap: 20px
+      &-info
+        border-right: none
+        padding-right: 0
+      &-progress
+        padding-left: 0
 
 
 
-
-.catalog
-  &-wrapper
-    background: $bg
-    padding-top: 50px
-    padding-bottom: 150px
-  &-title
-    margin-bottom: 70px
-    h1
-      margin: 0
-      font-size: 110px
-      font-weight: 100
-      color: #504C67
-      text-transform: uppercase
-  &-brand
-    h3
-      font-size: 50px
-      font-weight: 400
-      text-transform: uppercase
-
-    &__wrapper
-      margin-bottom: 25px
-    &__title
-      font-size: 24px
-      font-weight: 400
-      text-transform: uppercase
-    &__grid
-      display: grid
-      grid-template-columns: repeat(5,1fr)
-      grid-gap: 15px
-      margin-bottom: 35px
-    &__item
-      img
-        max-width: 100%
-        height: auto
-        object-fit: contain
-      &-name
-        font-size: 14px
-        font-weight: 400
-      &-price
-        font-size: 16px
-        font-weight: 400
-        color: #8F8C9E
-      &-add
-        background: #8F8C9E
-        border-radius: 10px
 
  </style>

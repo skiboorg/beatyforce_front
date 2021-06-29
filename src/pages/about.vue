@@ -267,7 +267,7 @@ export default {
           &-title
             font-size: 37px
 
-@media (max-width: 375px)
+@media (max-width: 500px)
   .about
     overflow: initial
     position: relative
@@ -590,7 +590,7 @@ export default {
     max-width: 18.750rem
     line-height: 1.500rem
 
-@media (max-width: 375px)
+@media (max-width: 500px)
   .page-about
     &__desc
       &-text

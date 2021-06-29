@@ -59,55 +59,28 @@
       <div class="container">
         <div class="slider-excellence">
           <h2 class="section__title section__title_excellence">Преимущества</h2>
+
           <VueSlickCarousel :arrows="true" >
-            <div class="slider-excellence__item">
-              <img class="slider-excellence__img" src="~assets/slide-01.jpg" alt="" />
+
+
+            <div
+              class="slider-excellence__item"
+              v-for="(banner,index) in banners" :key="banner.id">
+              <img class="slider-excellence__img" :src="banner.image" alt="" />
               <div class="slider-excellence__text">
                 <div class="slider-excellence__text-container">
-                  <h3 class="slider-excellence__title">Эксклюзивные бренды из Кореи</h3>
+                  <h3 class="slider-excellence__title">{{banner.title}}</h3>
                   <div class="slider-excellence__desc">
                     <p>
-                      Мы ценим качество и инновационные технологии в производстве, именно поэтому выбираем лучшие косметические бренды из Южной Кореи. Их эффективность доказана многочисленным клиническими
-                      исследованиями.
+                      {{banner.text}}
                     </p>
                   </div>
-                  <span class="slider-excellence__number">01 — 03</span>
+                  <span class="slider-excellence__number">0{{index+1}} — 0{{banners.length}}</span>
                 </div>
               </div>
             </div>
-            <div class="slider-excellence__item">
-              <img class="slider-excellence__img" src="~assets/slide-02.jpg" alt="" />
-              <div class="slider-excellence__text">
-                <div class="slider-excellence__text-container">
-                  <h3 class="slider-excellence__title">
-                    Прямой импорт <br />
-                    в страну продажи
-                  </h3>
-                  <div class="slider-excellence__desc">
-                    <p>
-                      Все импортируемые продукты перевозятся согласно законодательству, проходят сертификацию и маркировку. Благодаря собственной логистике, каждое средство бережно упаковывается и доставляется с
-                      соблюдением всех норм.
-                    </p>
-                  </div>
-                  <span class="slider-excellence__number">02 — 03</span>
-                </div>
-              </div>
-            </div>
-            <div class="slider-excellence__item">
-              <img class="slider-excellence__img" src="~assets/slide-03.jpg" alt="" />
-              <div class="slider-excellence__text">
-                <div class="slider-excellence__text-container">
-                  <h3 class="slider-excellence__title">
-                    Cильное <br />
-                    бренд-портфолио
-                  </h3>
-                  <div class="slider-excellence__desc">
-                    <p>В нашем портфолио популярные бренды из Европы, США и Южной Кореи. Все марки отвечают основным критериям: запатентованные ингредиенты и экологичное производство.</p>
-                  </div>
-                  <span class="slider-excellence__number">03 — 03</span>
-                </div>
-              </div>
-            </div>
+
+
             <template #prevArrow="arrowOption">
               <div class="custom-arrow">
                 <button class="slider-excellence__btn slider-excellence__btn_prev"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.21839 1L1 9L9.21839 17"/></svg></button>
@@ -115,10 +88,11 @@
             </template>
             <template #nextArrow="arrowOption">
               <div class="custom-arrow">
-              <button class="slider-excellence__btn slider-excellence__btn_next"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.78161 17L9 9L0.78161 1"/></svg></button>
+                <button class="slider-excellence__btn slider-excellence__btn_next"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.78161 17L9 9L0.78161 1"/></svg></button>
               </div>
             </template>
           </VueSlickCarousel>
+
 
         </div>
       </div>
@@ -458,39 +432,31 @@
           <h2 class="section__title">Видео</h2>
           <h3 class="section__subtitle">Смотрите наши обзоры</h3>
           <div class="video__slider slider-video">
-            <ul class="slider-video__list">
-              <li class="slider-video__item">
-                <a class="slider-video__slide" href="index.html#">
-                  <img class="slider-video__img" src="~assets/video-01.jpg" alt="" />
-                  <h3 class="slider-video__title">Бьюти бокс "Максимальное увлажнение" уже в продаже на Wildberries.ru</h3>
+
+            <VueSlickCarousel :arrows="true" v-bind="videoBannersSettings" >
+              <div class="slider-video__item" v-for="video in videos" :key="video.id">
+                <a target="_blank" class="slider-video__slide" :href="`https://www.youtube.com/watch?v=${video.url}`">
+                  <img class="slider-video__img" :src="video.image" alt="" />
+                  <h3 class="slider-video__title">{{video.text}}</h3>
                   <div class="btn slider-video__btn">
                     Смотреть <br />
                     на Youtube
                   </div>
                 </a>
-              </li>
-              <li class="slider-video__item">
-                <a class="slider-video__slide" href="index.html#">
-                  <img class="slider-video__img" src="~assets/video-02.jpg" alt="" />
-                  <h3 class="slider-video__title">Обзор на Гиалуроновый крем для лица HaruHaru Hyaluronic Cream</h3>
-                  <div class="btn slider-video__btn">
-                    Смотреть <br />
-                    на Youtube
-                  </div>
-                </a>
-              </li>
-              <li class="slider-video__item">
-                <a class="slider-video__slide" href="index.html#">
-                  <img class="slider-video__img" src="~assets/video-03.jpg" alt="" />
-                  <h3 class="slider-video__title">Обзор линейки уходовых средств Cellmiin Feel-A-Green</h3>
-                  <div class="btn slider-video__btn">
-                    Смотреть <br />
-                    на Youtube
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="slider-video__arrows"></div>
+              </div>
+              <template #prevArrow="arrowOption">
+                <div class="custom-arrow">
+                  <button class="slider-video__arrow slider-video__arrow_prev"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.21839 1L1 9L9.21839 17"/></svg></button>
+                </div>
+              </template>
+              <template #nextArrow="arrowOption">
+                <div class="custom-arrow">
+                  <button class="slider-video__arrow slider-video__arrow_next"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.78161 17L9 9L0.78161 1"/></svg></button>
+                </div>
+              </template>
+            </VueSlickCarousel>
+
+
           </div>
         </div>
       </div>
@@ -518,23 +484,64 @@
         </div>
       </div>
     </section>
-    <ContactForm/>
+    <!--    <ContactForm/>-->
   </q-page>
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import ContactForm from "components/common/ContactForm";
-// optional style for arrows & dots
-//import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-  components: {ContactForm, VueSlickCarousel },
+  components: {ContactForm,VueSlickCarousel },
   data () {
     return {
+      videoBannersSettings:{
+        "dots": false,
+        "focusOnSelect": true,
+
+        "infinite": true,
+        "speed": 500,
+        "slidesToShow": 3,
+        "slidesToScroll": 2,
+        "touchThreshold": 5,
+        "responsive": [
+          {
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": 3,
+              "slidesToScroll": 3,
+              "infinite": true,
+              "dots": true
+            }
+          },
+          {
+            "breakpoint": 900,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
+            }
+          },
+          {
+            "breakpoint": 600,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
+            }
+          },
+
+        ]
+      }
+
 
     }
+  },
+
+  computed:{
+    ...mapGetters('data',['banners','videos'])
   }
+
 }
 </script>

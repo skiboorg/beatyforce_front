@@ -279,13 +279,20 @@ export default {
       p
         font-size: 14px
         line-height: 18px
+        margin-bottom: 0
     &__column-title
       font-size: 18px
     &__row
-      flex-wrap: wrap
+
       & .footer__column:nth-child(1)
         flex-basis: 100%
-        margin-bottom: 50px
+        margin-bottom: 25px
+      & .footer__column:nth-child(2)
+        flex-basis: 50%
+        margin-bottom: 25px
+      & .footer__column:nth-child(3)
+        flex-basis: 50%
+        margin-bottom: 25px
     &__line
       flex-wrap: wrap
     &__copy

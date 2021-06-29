@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import {Cookies} from "quasar";
 
 import auth from './auth'
+import data from './data'
 
 
 Vue.use(Vuex)
@@ -12,6 +13,7 @@ export default function ({ ssrContext }) {
   const Store = new Vuex.Store({
     modules: {
        auth,
+       data,
 
     },
 

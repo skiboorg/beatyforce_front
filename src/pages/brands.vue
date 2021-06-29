@@ -2,8 +2,10 @@
   <q-page >
 <div class="page-brands">
             <div class="page-brands__hero">
+
                 <div class="container page-brands__container">
                     <h1 class="page-brands__title">Бренды</h1>
+
                     <ul class="page-brands__menu-list">
                         <li class="page-brands__menu-item" v-for="item in brands" :key="item.id">
                           <a class="page-brands__menu-link" href="brands.html#decorations">{{item.name}}</a>
@@ -22,11 +24,11 @@
                             <div class="brand-category">
                                 <ul class="brand-category__list">
                                     <li class="brand-category__item" v-for="brand in global_category.brands" :key="brand.id">
-                                        <a class="brand-category__link" href="brands.html#">
+                                        <router-link class="brand-category__link" :to="`/brands/${brand.name_slug}`">
                                             <div class="brand-category__icon">
                                                 <img :src="brand.logo" alt="">
                                             </div>
-                                        </a>
+                                        </router-link>
                                     </li>
                                 </ul>
                             </div>
@@ -156,7 +158,7 @@ export default {
       width: 135px
       height: 135px
 
-@media (max-width: 375px)
+@media (max-width: 500px)
   .brands
     padding-bottom: 200px
   .brands-grid
@@ -252,7 +254,7 @@ export default {
     display: none
 
 
-@media (max-width: 375px)
+@media (max-width: 500px)
   .brand-category
     &__list
       display: grid

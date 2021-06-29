@@ -9,39 +9,27 @@
                 <img :src="item.item.image">
               </q-avatar>
             </q-item-section>
-
             <q-item-section top class="col-6">
               <q-item-label >
                 <p class="q-mb-none text-h5 text-weight-light">{{item.item.name}}</p>
-
               </q-item-label>
-
             </q-item-section>
-            <q-item-section top class="col-2">
+            <q-item-section  top class="col-lg-2 col-md-2 col-sm-2  col-xs-12 cart-buttons">
               <q-item-label >
                 <q-btn-group  class="catalog-brand__item-add">
                     <q-btn color="white" dense :disable="is_creating" :loading="loading" @click="itemAction(item.item.id,'remove_quantity')" text-color="indigo-10" icon="remove" />
                     <q-btn color="white" dense :ripple="false" disable :loading="loading" text-color="indigo-10" :label="`${item.quantity} шт`" />
                     <q-btn color="white" dense :disable="is_creating" :loading="loading" @click="itemAction(item.item.id,'add_quantity')" text-color="indigo-10" icon="add" />
                   </q-btn-group>
-
               </q-item-label>
-
             </q-item-section>
-
-            <q-item-section top>
+            <q-item-section top class="cart-summ">
               <q-item-label >
                <p class="q-mb-none text-h5 text-weight-light">{{item.price}} ₽</p>
-
               </q-item-label>
-
             </q-item-section>
-
-            <q-item-section top side>
-
-              <q-btn class="gt-xs" @click="itemAction(item.id,'remove_item')" size="12px" flat dense round icon="close" />
-
-
+            <q-item-section class="cart-delete" top side>
+              <q-btn  @click="itemAction(item.id,'remove_item')" size="12px" flat dense round icon="close" />
             </q-item-section>
           </q-item>
         </div>
@@ -136,4 +124,26 @@ export default {
     background: #FFFFFF
     border-radius: 20px
     padding: 25px 20px
+@media (max-width: 600px)
+  .cart
+    &-wrapper
+      grid-template-columns: 1fr
+    &-item
+      position: relative
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-row-gap: 10px
+      & .cart-delete
+        position: absolute
+        right: 20px
+        top: 20px
+    &-buttons
+      order: 2
+      width: 100%
+    &-summ
+      order: 1
+
+
+  .q-item__section--main + .q-item__section--main
+    margin: 0
 </style>

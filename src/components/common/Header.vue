@@ -67,34 +67,34 @@
         <div class="header-menu__inner">
             <ul>
 
-                <li class="nav__item">
-                   <router-link class="nav__link" exact-active-class="nav__link_accent" to="/brands">Бренды</router-link>
+                <li @click="mobileMenuOpen=false" class="nav__item">
+                   <router-link  class="" exact-active-class="nav__link_accent" to="/brands">Бренды</router-link>
                 </li>
-              <li class="nav__item">
+              <li @click="mobileMenuOpen=false" class="nav__item">
                    <router-link class="nav__link" exact-active-class="nav__link_accent" to="/catalog">Каталог</router-link>
                 </li>
 
-              <li class="nav__item">
+              <li @click="mobileMenuOpen=false" class="nav__item">
                    <router-link class="nav__link" exact-active-class="nav__link_accent" to="/partnership">Партнерство</router-link>
                 </li>
 
-              <li class="nav__item">
+              <li @click="mobileMenuOpen=false" class="nav__item">
                    <router-link class="nav__link" exact-active-class="nav__link_accent" to="/about">О компании</router-link>
                 </li>
 
-              <li class="nav__item">
+              <li @click="mobileMenuOpen=false" class="nav__item">
                    <router-link class="nav__link" exact-active-class="nav__link_accent" to="/press">Пресса</router-link>
                 </li>
-              <li class="nav__item">
+              <li @click="mobileMenuOpen=false" class="nav__item">
                    <router-link class="nav__link" exact-active-class="nav__link_accent" to="/contacts">Контакты</router-link>
                 </li>
 
 
-                <li class="nav__item"><a class="nav__link" href="https://beautyforce.store/" target="_blank">Интернет-магазин</a></li>
-              <li v-if="$user.loggedIn" class="nav__item">
+                <li @click="mobileMenuOpen=false" class="nav__item"><a class="nav__link" href="https://beautyforce.store/" target="_blank">Интернет-магазин</a></li>
+              <li @click="mobileMenuOpen=false" v-if="$user.loggedIn" class="nav__item">
                    <router-link class="nav__link" exact-active-class="nav__link_accent" to="/lk/catalog">ЛК</router-link>
                 </li>
-              <li v-else class="nav__item">
+              <li @click="mobileMenuOpen=false" v-else class="nav__item">
                    <router-link class="nav__link" exact-active-class="nav__link_accent" to="/lk/login">Вход</router-link>
                 </li>
 

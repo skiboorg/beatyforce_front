@@ -4,10 +4,10 @@
             <div class="container">
                 <h1 class="page-press__title">Пресса</h1>
                 <ul class="page-press__months months__list">
-                    <li class="months__item">Октябрь <span>2020</span></li>
-                    <li class="months__item">Сентябрь <span>2020</span></li>
-                    <li class="months__item">Август <span>2020</span></li>
-                    <li class="months__item">Июль <span>2020</span></li>
+                    <li class="months__item"><p class="no-margin gt-sm">Октябрь</p> <span>2020</span></li>
+                    <li class="months__item"><p class="no-margin gt-sm">Сентябрь</p> <span>2020</span></li>
+                    <li class="months__item"><p class="no-margin gt-sm">Август</p> <span>2020</span></li>
+                    <li class="months__item"><p class="no-margin gt-sm">Июль</p> <span>2020</span></li>
                 </ul>
                 <div class="press-grid">
                     <h2 class="press-grid__title">Октябрь 2020</h2>
@@ -181,11 +181,8 @@ export default {
 .press-grid__list
   display: -ms-grid
   display: grid
-  grid-template-areas: ". ."
-  -ms-grid-rows: auto
-  grid-template-rows: auto
-  gap: 3.125rem 3.125rem
-  margin-bottom: 3.438rem
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr))
+  grid-gap: 50px
 
 .press-grid__item
   display: -webkit-box
@@ -245,4 +242,18 @@ export default {
 
   span
     color: #8f8c9e
+@media (max-width: 500px)
+  .page-press
+    padding: 50px 0
+  .page-press__title
+    font-size: 60px
+    margin-top: 0
+    margin-bottom: 15px
+  .press-grid__title
+    font-size: 24px
+    margin-bottom: 25px
+  .page-press__months
+    margin-bottom: 50px
+
+
  </style>

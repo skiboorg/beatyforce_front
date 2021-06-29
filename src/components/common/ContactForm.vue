@@ -1,11 +1,11 @@
 <template>
  <section class="section-form">
-      <div class="container">
+
         <div class="section-form__content">
           <div class="section-form__left">
-            <h2 class="section__title">Контакты</h2>
+            <h2 class="section__title">{{subtitle}}</h2>
             <h3 class="section__subtitle">
-              ЛИЧНЫЙ B2B-КАБИНЕТ.
+              {{title}}
             </h3>
             <q-form class="mainform" >
               <div class="mainform__row">
@@ -22,7 +22,7 @@
               </div>
 
            <div class="mainform__row mainform__row_flex">
-             <q-btn label="Отправить" class="btn mainform__btn mainform__button" type="submit" color="primary"/>
+             <q-btn label="Отправить" class="btn mainform__btn mainform__button" type="submit" text-color="indigo-10" color="white"/>
 
                 <span class="mainform__disclaimer">
                                     Нажимая кнопку, вы соглашаетесь
@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-      </div>
+
     </section>
 </template>
 
@@ -48,7 +48,7 @@
 
 
 export default {
-
+props:['title','subtitle'],
   data () {
     return {
 
