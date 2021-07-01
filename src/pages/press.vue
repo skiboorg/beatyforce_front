@@ -4,142 +4,27 @@
             <div class="container">
                 <h1 class="page-press__title">Пресса</h1>
                 <ul class="page-press__months months__list">
-                    <li class="months__item"><p class="no-margin gt-sm">Октябрь</p> <span>2020</span></li>
-                    <li class="months__item"><p class="no-margin gt-sm">Сентябрь</p> <span>2020</span></li>
-                    <li class="months__item"><p class="no-margin gt-sm">Август</p> <span>2020</span></li>
-                    <li class="months__item"><p class="no-margin gt-sm">Июль</p> <span>2020</span></li>
+                    <li class="months__item" v-for="cat in press_categories" :key="cat.id" v-html="cat.name"></li>
+
                 </ul>
-                <div class="press-grid">
-                    <h2 class="press-grid__title">Октябрь 2020</h2>
+                <div class="press-grid" v-for="cat in press_categories" :key="cat.id">
+                    <h2 class="press-grid__title" v-html="cat.name"></h2>
                     <ul class="press-grid__list">
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-7days"></div></div>
+                        <li class="press-grid__item "  v-for="item in cat.items" :key="item.id">
+                            <div class="press-grid__pic"><img :src="item.logo" alt=""></div>
                             <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Патчи или крем для глаз: что эффективнее</h3>
-                                <div class="press-grid__item-desc"><p>Патчи для носогубных складок Foreverskin</p></div>
+                                <h3 class="press-grid__item-title">{{item.text}}</h3>
+                                <div class="press-grid__item-desc"><p>{{item.descr}}</p></div>
                             </div>
-                            <img class="press-grid__item-img" src="~assets/01.jpg" alt="" />
+                          <a :href="item.url" target="_blank">
+                            <img class="press-grid__item-img" :src="item.image" alt="" />
+                          </a>
+
                         </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-cosmo"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Плотная порция ухода: 35 питательных кремов, масел и сывороток на холодный сезон</h3>
-                                <div class="press-grid__item-desc"><p>Ягоды маки – мощнейший антиоксидант, также стимулирующий обменные процессы.</p></div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/02.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-dochki-materi"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Добро пожаловать: новый бренд на российском рынке – Haruharu Wonder</h3>
-                                <div class="press-grid__item-desc"><p>Рассказываем о новом корейском бренде по уходу за кожей лица, который создает средства для фундаментального бьюти-ритуала.</p></div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/03.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-afisha"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">19 бьюти-новинок месяца</h3>
-                                <div class="press-grid__item-desc"><p>Корейский бренд косметики в стильных упаковках (чего стоят овалы с сыворотками) теперь появился в России. Обратите внимание на средства для питания кожи.</p></div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/04.jpg" alt="" />
-                        </li>
+
                     </ul>
                 </div>
-                <div class="press-grid">
-                    <h2 class="press-grid__title">Сентябрь 2020</h2>
-                    <ul class="press-grid__list">
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-flacon"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">ЛЕПИМ И СМОТРИМ: КАКИЕ ПАТЧИ ПОМОГАЮТ ПРИЙТИ В СЕБЯ ПОСЛЕ СЕРИАЛЬНЫХ ЗАПОЕВ</h3>
-                                <div class="press-grid__item-desc">
-                                    <p>
-                                        Когда поняла, что на часах уже за два ночи, а остановиться вряд ли получится, решила предпринять меры. Ими стала ночная глиттерная маска Dr. Gloderm. Хорошее лекало: до этого ни разу не пользовалась
-                                        подобными средствами, так что на 15 минут почувствовала себя супергероиней. Эффект позитивный: кожа подтянулась, зона вокруг глаз увлажнилась.
-                                    </p>
-                                </div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/05.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-elle"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Eco-ELLE: +1 бренд корейской косметики с очень крутым дизайном</h3>
-                                <div class="press-grid__item-desc"><p>Поклонники k-beauty, трепещите: в России появился новый корейский бренд органической косметики с чудным, но смысловым названием Haruharu Wonder.</p></div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/06.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-beauty-insider"></div></div>
-                            <h3 class="press-grid__item-title">Встретились русский, немец, француз и два корейца: новые косметические марки в России</h3>
-                            <div class="press-grid__item-desc">
-                                <p>
-                                    Haruharu сравнивают свои средства с утренней чашкой кофе — ритуал, который мы выполняем каждый день. Поэтому упаковки сделаны в виде стаканчиков. После того, как крем закончится, марка предлагает
-                                    использовать их повторно — в качестве горшка для цветов, подставки для карандашей и тому подобного.
-                                </p>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/06.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-buro"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Кофейные стаканы, конопля и котики — в бьюти-новинках этой недели</h3>
-                                <div class="press-grid__item-desc">
-                                    <p>Теперь и в России — корейский бренд, который прославился благодаря двум составляющим. Раз — упаковке кремов в виде стаканчика кофе. Два — активному ингредиенту ферментированному черному рису.</p>
-                                </div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/07.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-wday"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Новинки декоративной косметики для осеннего макияжа</h3>
-                                <div class="press-grid__item-desc">
-                                    <p>
-                                        Что касается ровного тона, то его обеспечит жидкая тональная основа One Drop Miracle Air Tint. Средство, которое вы практически не будете ощущать, скроет все несовершенства и благодаря мелкодисперсной
-                                        пудре в составе продержится весь рабочий день.
-                                    </p>
-                                </div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/08.jpg" alt="" />
-                        </li>
-                    </ul>
-                </div>
-                <div class="press-grid">
-                    <h2 class="press-grid__title">Август 2020</h2>
-                    <ul class="press-grid__list">
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-flacon"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Зеркальный блеск для губ, молочко для продления загара и другие бьюти-новинки недели</h3>
-                                <div class="press-grid__item-desc"><p></p></div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/09.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-wday"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">Сыворотки, кремы и флюиды: главные новинки средств для лица</h3>
-                                <div class="press-grid__item-desc"><p></p></div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/10.jpg" alt="" />
-                        </li>
-                        <li class="press-grid__item">
-                            <div class="press-grid__pic"><div class="icon-afisha"></div></div>
-                            <div class="press-grid__item-header">
-                                <h3 class="press-grid__item-title">16 бьюти-новинок месяца</h3>
-                                <div class="press-grid__item-desc">
-                                    <p>
-                                        Мыло, напоминающее молочный пудинг, можно использовать и для умывания лица. Но лучше не каждый день. Если вы думали, что самые инстаграмные патчи — золотые, значит, вы не пробовали эти, напоминающие
-                                        сашими из лосося. Корейское тональное средство, которое ничем не уступает бестселлерам в категории BB-кремов, а по цене их даже обыгрывает.
-                                    </p>
-                                </div>
-                            </div>
-                            <img class="press-grid__item-img" src="~assets/11.jpg" alt="" />
-                        </li>
-                    </ul>
-                </div>
+
             </div>
         </div>
   </q-page>
@@ -152,9 +37,16 @@ export default {
 
   data () {
     return {
-
+      press_categories:[],
     }
-  }
+  },
+   async mounted() {
+    const response = await this.$api.get('/api/brand/press')
+    this.press_categories = response.data
+
+
+
+  },
 }
 </script>
  <style lang="sass">
@@ -218,6 +110,10 @@ export default {
 
 .press-grid__pic
   margin-bottom: 1.563rem
+  img
+    width: 90px
+    height: 20px
+    object-fit: contain
 
 .press-grid__title
   margin-bottom: 1.563rem
