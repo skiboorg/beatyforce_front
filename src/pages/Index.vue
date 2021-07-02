@@ -310,8 +310,14 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <ContactForm title="сделаем первый шаг к сотрудничеству" subtitle="контакты"/>
+      </div>
+
     </section>
-    <!--    <ContactForm/>-->
+
+
+
   </q-page>
 </template>
 
