@@ -1,7 +1,9 @@
 <template>
-  <q-page class="main-bg">
-    <q-page-sticky v-if="cart.items.length>0" position="bottom-right" :offset="[18, 18]">
-            <q-btn @click="$router.push('/lk/cart')" fab class="btn" icon="shopping_cart" color="white" text-color="indigo-10" label="Ваш заказ" />
+  <q-page style="overflow-x: hidden" class="main-bg">
+    <q-page-sticky style="z-index: 100" v-if="cart.items.length>0" position="bottom-right" :offset="[18, 18]">
+            <q-btn @click="$router.push('/lk/cart')" fab  size="sm" color="white" text-color="indigo-10"  >
+                <span>ОФОРМИТЬ ЗАКАЗ {{cart.total_price}} ₽</span>
+            </q-btn>
           </q-page-sticky>
     <div class="catalog-wrapper">
       <div class="container">
@@ -72,9 +74,9 @@
           <div class="catalog-brand__wrapper" v-for="category in brand.lines" :key="category.id">
             <p class="catalog-brand__title">{{category.name}}</p>
             <div class="catalog-brand__grid">
-                <div class="catalog-brand__item" v-for="item in category.items" :key="item.id">
+                <div class="catalog-brand__item "  v-for="item in category.items" :key="item.id">
 
-                  <q-img :ratio="1" :src="item.image" alt="" />
+                  <q-img @click="openModal(item)" :ratio="1" class="cursor-pointer" :src="item.image" alt="" />
                   <p class="catalog-brand__item-name">{{item.name}}</p>
                    <q-btn  v-if="cart.items.filter(x=>x.item===item.id).length===0"
                           class="catalog-brand__item-add"
@@ -119,6 +121,41 @@
         </div>
       </div>
     </div>
+     <q-dialog  v-model="itemModal" >
+      <q-card  class="itemModal" style="width: 900px; max-width: 80vw;">
+
+        <q-card-section  class="q-pa-sm ">
+          <div class="row">
+             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 itemModal-img">
+           <q-img  :ratio="1" :src="cur_item.image" alt=""/>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 itemModal-info">
+            <h3 class="itemModal-title">{{cur_item.name}}</h3>
+            <p>{{cur_item.article}}</p>
+             <q-btn  v-if="cart.items.filter(x=>x.item===cur_item.id).length===0"
+                          class="catalog-brand__item-add"
+                          icon="add"
+                           color="white"
+                           text-color="indigo-10"
+                           :loading="loadingModal"
+                          @click="itemAction(cur_item.id,'add_to_cart')"
+                          :label="`${cur_item.price} ₽`" />
+                    <q-btn-group v-else  class="catalog-brand__item-add">
+                    <q-btn color="white" :loading="loadingModal" @click="itemAction(cur_item.id,'remove_quantity')" text-color="indigo-10" icon="remove" />
+                    <q-btn color="white" :ripple="false" disable :loading="loadingModal" text-color="indigo-10" :label="cart.items.find(x=>x.item===cur_item.id).quantity" />
+                    <q-btn color="white" :loading="loadingModal" @click="itemAction(cur_item.id,'add_quantity')" text-color="indigo-10" icon="add" />
+                    </q-btn-group>
+            <div class="" v-html="cur_item.description">
+
+            </div>
+          </div>
+          </div>
+
+        </q-card-section>
+
+
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -130,7 +167,10 @@ export default {
   data () {
     return {
       visible:false,
+      itemModal:false,
       loading:false,
+      loadingModal:false,
+      cur_item:{},
       brands:[],
       cart:{
         items:[]
@@ -147,6 +187,11 @@ export default {
 
   },
   methods:{
+    openModal(item){
+      this.cur_item=item
+      this.itemModal = true
+    },
+
     async getCart(){
       const response_cart = await this.$api.get('/api/cart/simple')
       this.cart = response_cart.data
